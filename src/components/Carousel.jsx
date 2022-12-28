@@ -1,10 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
-import { DEFAULT_CARD } from '../utils/consts'
 import {TiChevronLeftOutline, TiChevronRightOutline} from 'https://cdn.skypack.dev/react-icons/ti';
 
-const Carousel = ({children}) => {
-  const [active, setActive] = useState(DEFAULT_CARD)
+const Carousel = ({children, defualtCard, cardsRepView}) => {
+  const [active, setActive] = useState(defualtCard)
 
   return (
     <div className='carousel'>

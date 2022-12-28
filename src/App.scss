@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
+$textColor: rgb(255 255 255 / .6);
+
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +38,7 @@ html {
 .card {
   margin: auto;
   padding: 20px 30px;
-  color: rgb(255 255 255 / .6);
+  color: $textColor;
   background-color: rgb(255 255 255 / .1);
   box-shadow: 4px 4px 10px rgb(0 0 0 / .6);
 
@@ -49,13 +51,20 @@ html {
 .nav {
   position: absolute;
   top: 50%;
+  display: flex;
+  background: transparent;
+  border: 0;
+  font-size: 50px;
+  color: $textColor;
+  translate: 0 -50%;
+  cursor: pointer;
   z-index: 100;
 
   &.left {
-    translate: -200% 50%;
+    transform: translateX(-200%);
   }
   &.right {
     right: 0;
-    translate: 200% 50%;
+    transform: translateX(200%);
   }
 }
