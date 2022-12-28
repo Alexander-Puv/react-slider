@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, rgba(0,34,68,1) 0%, rgba(102,0,0,1) 100%);
+  font-family: 'Ubuntu', sans-serif;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 350px;
+  height: 100vh;
+}
+
+.card_container {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  user-select: none;
+  opacity: var(--active);
+  transform: translateX(calc(var(--offset) * (100% + 20px)));
+  transition: .5s ease;
+}
+
+.card {
+  margin: auto;
+  padding: 20px 30px;
+  color: rgb(255 255 255 / .6);
+  background-color: rgb(255 255 255 / .1);
+  box-shadow: 4px 4px 10px rgb(0 0 0 / .6);
+
+  p {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+
+  &.left {
+    translate: -200% 50%;
+  }
+  &.right {
+    right: 0;
+    translate: 200% 50%;
+  }
+}
