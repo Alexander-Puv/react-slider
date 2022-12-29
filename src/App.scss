@@ -21,12 +21,13 @@ html {
 
 .carousel {
   position: relative;
-  width: 350px;
+  width: calc(350px * var(--cards-per-view));
   height: 100vh;
 }
 
 .card_container {
   position: absolute;
+  width: calc(100% / var(--cards-per-view) - 20px + 20px / var(--cards-per-view));
   height: 100%;
   display: flex;
   user-select: none;
@@ -61,10 +62,10 @@ html {
   z-index: 100;
 
   &.left {
-    transform: translateX(-200%);
+    transform: translateX(-150%);
   }
   &.right {
     right: 0;
-    transform: translateX(200%);
+    transform: translateX(150%);
   }
 }
